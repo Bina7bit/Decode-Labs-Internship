@@ -1,0 +1,123 @@
+[2026-07-17 19:56:56] INFO - Initializing analytics workflow...
+[2026-07-17 19:56:56] INFO - Starting data loading and cleaning process...
+[2026-07-17 19:56:56] INFO - Loading raw dataset from: C:\Users\anshu\.gemini\antigravity\scratch\Decode Labs Intership\DecodeLabs-Internship\Projects\Project 3\Dataset for Data Analytics.xlsx
+[2026-07-17 19:56:56] INFO - Loaded dataset with 1200 rows and 14 columns.
+[2026-07-17 19:56:56] INFO - Cleaned column names: stripped surrounding whitespace.
+[2026-07-17 19:56:56] INFO - Initial null counts:
+CouponCode    309
+dtype: int64
+[2026-07-17 19:56:56] INFO - Filled missing CouponCode values with 'NONE' and standardized to upper case.
+[2026-07-17 19:56:56] INFO - Validated: TotalPrice matches Quantity * UnitPrice in all records.
+[2026-07-17 19:56:56] INFO - Validated: No duplicate OrderIDs found.
+[2026-07-17 19:56:56] INFO - Saving cleaned dataset to: C:\Users\anshu\.gemini\antigravity\scratch\Decode Labs Intership\DecodeLabs-Internship\Projects\Project 3\data\processed\cleaned_dataset.csv
+[2026-07-17 19:56:56] INFO - Data loading and cleaning completed successfully!
+[2026-07-17 19:56:56] INFO - Starting database setup...
+[2026-07-17 19:56:56] INFO - Removing existing database file at: C:\Users\anshu\.gemini\antigravity\scratch\Decode Labs Intership\DecodeLabs-Internship\Projects\Project 3\ecommerce.db
+[2026-07-17 19:56:56] INFO - Connected to database at: C:\Users\anshu\.gemini\antigravity\scratch\Decode Labs Intership\DecodeLabs-Internship\Projects\Project 3\ecommerce.db
+[2026-07-17 19:56:56] INFO - Creating 'coupons' table...
+[2026-07-17 19:56:56] INFO - Creating 'orders' table...
+[2026-07-17 19:56:56] INFO - Inserting records into 'coupons' table...
+[2026-07-17 19:56:56] INFO - Ingesting orders from cleaned CSV: C:\Users\anshu\.gemini\antigravity\scratch\Decode Labs Intership\DecodeLabs-Internship\Projects\Project 3\data\processed\cleaned_dataset.csv
+[2026-07-17 19:56:56] INFO - Successfully inserted 1200 orders into the 'orders' table.
+[2026-07-17 19:56:56] INFO - Creating performance indexes...
+[2026-07-17 19:56:56] INFO - Indexes created successfully.
+[2026-07-17 19:56:56] INFO - Creating database views...
+[2026-07-17 19:56:56] INFO - Database commit successful. Views created.
+[2026-07-17 19:56:56] INFO - Database setup completed successfully!
+[2026-07-17 19:56:56] INFO - Starting SQL queries analysis execution...
+[2026-07-17 19:56:56] INFO - Writing query insights to: C:\Users\anshu\.gemini\antigravity\scratch\Decode Labs Intership\DecodeLabs-Internship\Projects\Project 3\query_insights_report.md
+[2026-07-17 19:56:56] INFO - Executing: query_01 - Select All Orders (Limit)
+[2026-07-17 19:56:56] INFO - Executing: query_02 - Distinct Product Categories
+[2026-07-17 19:56:56] INFO - Executing: query_03 - Distinct Payment Methods
+[2026-07-17 19:56:56] INFO - Executing: query_04 - Distinct Referral Sources
+[2026-07-17 19:56:56] INFO - Executing: query_05 - High Quantity Orders (WHERE)
+[2026-07-17 19:56:56] INFO - Executing: query_06 - Shipped Orders Filter
+[2026-07-17 19:56:56] INFO - Executing: query_07 - Orders Exceeding $2000 (WHERE, ORDER BY)
+[2026-07-17 19:56:56] INFO - Executing: query_08 - Laptop Purchases with High Quantity
+[2026-07-17 19:56:56] INFO - Executing: query_09 - Orders by Specific Repeat Customer
+[2026-07-17 19:56:56] INFO - Executing: query_10 - Latest Orders (Date Sort)
+[2026-07-17 19:56:56] INFO - Executing: query_11 - Total Order Count (COUNT)
+[2026-07-17 19:56:56] INFO - Executing: query_12 - Total Gross Revenue (SUM)
+[2026-07-17 19:56:56] INFO - Executing: query_13 - Average Product Unit Price (AVG)
+[2026-07-17 19:56:56] INFO - Executing: query_14 - Min and Max Order Values (MIN, MAX)
+[2026-07-17 19:56:56] INFO - Executing: query_15 - Revenue and Orders by Product
+[2026-07-17 19:56:56] INFO - Executing: query_16 - Average Quantity Sold per Product
+[2026-07-17 19:56:56] INFO - Executing: query_17 - Products Exceeding Sales Threshold (HAVING)
+[2026-07-17 19:56:56] INFO - Executing: query_18 - Revenue by Payment Method
+[2026-07-17 19:56:56] INFO - Executing: query_19 - Revenue by Referral Source
+[2026-07-17 19:56:56] INFO - Executing: query_20 - Cart Size by Order Status
+[2026-07-17 19:56:56] INFO - Executing: query_21 - Monthly Orders Trend (strftime)
+[2026-07-17 19:56:56] INFO - Executing: query_22 - Yearly Revenue Analysis
+[2026-07-17 19:56:56] INFO - Executing: query_23 - Sales Distribution by Month Number
+[2026-07-17 19:56:56] INFO - Executing: query_24 - Weekly Sales Activity (Day of Week)
+[2026-07-17 19:56:56] INFO - Executing: query_25 - Orders Placed in H2 2024 (Date Filter)
+[2026-07-17 19:56:56] INFO - Executing: query_26 - Top 10 High-Value Customers
+[2026-07-17 19:56:56] INFO - Executing: query_27 - Average Order Value (AOV) per Customer
+[2026-07-17 19:56:56] INFO - Executing: query_28 - Repeat Customer Analysis (HAVING)
+[2026-07-17 19:56:56] INFO - Executing: query_29 - Customer Value Segmentation (CASE WHEN)
+[2026-07-17 19:56:56] INFO - Executing: query_30 - Bottom 10 Customers by Revenue
+[2026-07-17 19:56:56] INFO - Executing: query_31 - Product Revenue Rank (CTEs & RANK)
+[2026-07-17 19:56:56] INFO - Executing: query_32 - Category Price Comparison Subquery
+[2026-07-17 19:56:56] INFO - Executing: query_33 - Product Revenue Share (Window Function)
+[2026-07-17 19:56:56] INFO - Executing: query_34 - Running Total Revenue over Time
+[2026-07-17 19:56:56] INFO - Executing: query_35 - Moving Average Order Revenue (Window Function)
+[2026-07-17 19:56:56] INFO - Executing: query_36 - Coupon Utilization Rate & Revenue Impact
+[2026-07-17 19:56:56] INFO - Executing: query_37 - Acquisition Revenue by Referral Source
+[2026-07-17 19:56:56] INFO - Executing: query_38 - Coupon Performance Matrix
+[2026-07-17 19:56:56] INFO - Executing: query_39 - Coupon Discount Analysis (JOIN)
+[2026-07-17 19:56:56] INFO - Executing: query_40 - Instagram High-Value Orders (WHERE, JOIN)
+[2026-07-17 19:56:56] INFO - Executing: query_41 - Month-over-Month Revenue Growth (CTEs & LAG)
+[2026-07-17 19:56:56] INFO - Executing: query_42 - Shipping Address and Tracking Audit (String Functions)
+[2026-07-17 19:56:56] INFO - Executing: query_43 - Tracking Number Prefix Analysis
+[2026-07-17 19:56:56] INFO - Executing: query_44 - Customer Segmentation Summary (CTEs & CASE)
+[2026-07-17 19:56:56] INFO - Executing: query_45 - Query the Product Performance View
+[2026-07-17 19:56:56] INFO - Executing: query_46 - Query Performance Audit with Indexes
+[2026-07-17 19:56:56] INFO - SQL queries analysis and report generation completed successfully!
+[2026-07-17 19:56:56] INFO - Analysis complete. Insights report saved to: C:\Users\anshu\.gemini\antigravity\scratch\Decode Labs Intership\DecodeLabs-Internship\Projects\Project 3\query_insights_report.md
+[2026-07-17 19:56:56] INFO - Starting visualization generation...
+[2026-07-17 19:56:56] INFO - Generating Chart 1: Sales Trend...
+[2026-07-17 19:56:57] INFO - Saved visualization to: C:\Users\anshu\.gemini\antigravity\scratch\Decode Labs Intership\DecodeLabs-Internship\Projects\Project 3\images\sales_trend.png
+[2026-07-17 19:56:57] INFO - Generating Chart 2: Monthly Revenue...
+[2026-07-17 19:56:57] INFO - Saved visualization to: C:\Users\anshu\.gemini\antigravity\scratch\Decode Labs Intership\DecodeLabs-Internship\Projects\Project 3\images\monthly_revenue.png
+[2026-07-17 19:56:57] INFO - Generating Chart 3: Top Products...
+[2026-07-17 19:56:57] INFO - Saved visualization to: C:\Users\anshu\.gemini\antigravity\scratch\Decode Labs Intership\DecodeLabs-Internship\Projects\Project 3\images\top_products.png
+[2026-07-17 19:56:57] INFO - Generating Chart 4: Revenue by Referral Source...
+[2026-07-17 19:56:57] INFO - Saved visualization to: C:\Users\anshu\.gemini\antigravity\scratch\Decode Labs Intership\DecodeLabs-Internship\Projects\Project 3\images\revenue_by_referral.png
+[2026-07-17 19:56:57] INFO - Generating Chart 5: Revenue by Payment Method...
+[2026-07-17 19:56:57] INFO - Saved visualization to: C:\Users\anshu\.gemini\antigravity\scratch\Decode Labs Intership\DecodeLabs-Internship\Projects\Project 3\images\revenue_by_payment.png
+[2026-07-17 19:56:57] INFO - Generating Chart 6: Coupon Performance...
+[2026-07-17 19:56:58] INFO - Saved visualization to: C:\Users\anshu\.gemini\antigravity\scratch\Decode Labs Intership\DecodeLabs-Internship\Projects\Project 3\images\coupon_performance.png
+[2026-07-17 19:56:58] INFO - Generating Chart 7: Order Status Distribution...
+[2026-07-17 19:56:58] INFO - Saved visualization to: C:\Users\anshu\.gemini\antigravity\scratch\Decode Labs Intership\DecodeLabs-Internship\Projects\Project 3\images\order_status_distribution.png
+[2026-07-17 19:56:58] INFO - Generating Chart 8: Top Customers...
+[2026-07-17 19:56:58] INFO - Saved visualization to: C:\Users\anshu\.gemini\antigravity\scratch\Decode Labs Intership\DecodeLabs-Internship\Projects\Project 3\images\top_customers.png
+[2026-07-17 19:56:58] INFO - Generating Chart 9: Average Order Value by Product...
+[2026-07-17 19:56:58] INFO - Saved visualization to: C:\Users\anshu\.gemini\antigravity\scratch\Decode Labs Intership\DecodeLabs-Internship\Projects\Project 3\images\average_order_value.png
+[2026-07-17 19:56:58] INFO - Generating Chart 10: Product Frequency...
+[2026-07-17 19:56:58] INFO - Saved visualization to: C:\Users\anshu\.gemini\antigravity\scratch\Decode Labs Intership\DecodeLabs-Internship\Projects\Project 3\images\product_frequency.png
+[2026-07-17 19:56:58] INFO - All visualizations generated and saved successfully!
+[2026-07-17 19:56:58] INFO - Generating portfolio screenshots...
+[2026-07-17 19:56:58] INFO - Generating Folder Structure screenshot...
+[2026-07-17 19:56:58] INFO - Generating SQL Queries screenshot...
+[2026-07-17 19:56:58] INFO - Generating Python Output screenshot...
+[2026-07-17 19:56:58] INFO - Generating README Preview screenshot...
+[2026-07-17 19:56:58] INFO - All screenshots created successfully!
+[2026-07-17 19:56:58] INFO - Initiating PDF report creation at: C:\Users\anshu\.gemini\antigravity\scratch\Decode Labs Intership\DecodeLabs-Internship\Projects\Project 3\Project_Report.pdf
+[2026-07-17 19:56:58] INFO - Writing PDF Cover Page...
+[2026-07-17 19:56:59] INFO - Writing PDF Page 2: Intro & Objectives...
+[2026-07-17 19:56:59] INFO - Writing PDF Page 3: Methodology...
+[2026-07-17 19:56:59] INFO - Writing PDF Page 4: SQL Concepts...
+[2026-07-17 19:56:59] INFO - Writing PDF Page 5: Dashboard 1...
+[2026-07-17 19:56:59] INFO - Writing PDF Page 6: Dashboard 2...
+[2026-07-17 19:57:00] INFO - Writing PDF Page 7: Dashboard 3...
+[2026-07-17 19:57:00] INFO - Writing PDF Page 8: Recommendations...
+[2026-07-17 19:57:00] INFO - Writing PDF Page 9: Conclusion...
+[2026-07-17 19:57:00] INFO - PDF report successfully written and compiled!
+[2026-07-17 19:57:00] INFO - All project deliverables generated successfully in 4.11 seconds!
+[2026-07-17 19:57:00] INFO - Deliverables Inventory:
+[2026-07-17 19:57:00] INFO - - Processed CSV: data/processed/cleaned_dataset.csv
+[2026-07-17 19:57:00] INFO - - SQLite DB: ecommerce.db
+[2026-07-17 19:57:00] INFO - - Markdown Insights Report: query_insights_report.md
+[2026-07-17 19:57:00] INFO - - 10 Visualizations: images/
+[2026-07-17 19:57:00] INFO - - 4 Mock Screenshots: screenshots/
+[2026-07-17 19:57:00] INFO - - PDF Project Report: Project_Report.pdf
